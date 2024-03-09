@@ -1,0 +1,130 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  background-color: #23272f;
+  color: white;
+  justify-content: center;
+  height: 100dvh;
+}
+
+h1 {
+  text-align: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  cursor: pointer;
+  position: relative;
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.right-border{
+  border-right: .3rem solid #0074a6;
+}
+
+.bottom-border {
+  border-bottom: .3rem solid #0074a6;
+}
+
+.x-hover:hover::after {
+  content: 'X';
+  opacity: .4;
+}
+
+.o-hover:hover::after {
+  content: 'O';
+  opacity: .4;
+}
+
+.strike {
+  position: absolute;
+  background-color: darkorange;
+}
+
+.strike-row-1 {
+  top: 16%;
+  width: 100%;
+  height: 4px;
+}
+
+.strike-row-2 {
+  top: 49%;
+  width: 100%;
+  height: 4px;
+}
+
+.strike-row-3 {
+  top: 83%;
+  width: 100%;
+  height: 4px;
+}
+
+.strike-column-1 {
+  left: 15%;
+  height: 100%;
+  width: 4px;
+}
+
+.strike-column-2 {
+  left: 49%;
+  height: 100%;
+  width: 4px;
+}
+
+.strike-column-3 {
+  left: 83%;
+  height: 100%;
+  width: 4px;
+}
+
+.strike-diagonal-1 {
+  top: 50%;
+  left: 5%;
+  width: 90%;
+  height: 4px;
+  transform: skewY(45deg);
+}
+
+.strike-diagonal-2 {
+  top: 50%;
+  left: 5%;
+  width: 90%;
+  height: 4px;
+  transform: skewY(-45deg);
+}
+
+.game-over {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #6d7992;
+  padding: 10px;
+}
+
+.reset-button {
+  background-color: transparent;
+  width: 50%;
+  padding: 10px;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #2759c6;
+  color: white;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
